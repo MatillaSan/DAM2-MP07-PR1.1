@@ -15,8 +15,8 @@ class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Nintendo DB'),
-        ),
-        body: ListView(
+      ),
+      body: ListView(
         children: <Widget>[
           ListTile(
             title: const Text('Personatges'),
@@ -32,16 +32,13 @@ class _StateLayoutMobileScreen0 extends State<LayoutMobileScreen0> {
             title: const Text('Consoles'),
             onTap: () => _navigateTo(context, 'Consoles'),
           ),
-
         ],
       ),
     );
   }
 
-  void _navigateTo (BuildContext context, String value) {
+  void _navigateTo(BuildContext context, String value) {
     Navigator.of(context).push(MaterialPageRoute(
-    builder: (context) => LayoutMobileScreen1(seccio: value)));
+        builder: (context) => LayoutMobileScreen1(seccio: value)));
   }
-
 }
-
