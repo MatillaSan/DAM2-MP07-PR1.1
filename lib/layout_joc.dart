@@ -56,11 +56,15 @@ class LayoutJoc extends StatelessWidget {
                       fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 30),
-                Text(
-                  "${itemData['descripcio']}",
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.normal),
-                ),
+                Padding(
+                  padding:
+                      EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                  child: Text(
+                    "${itemData['descripcio']}",
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.normal),
+                  ),
+                )
               ],
             ),
           ),
