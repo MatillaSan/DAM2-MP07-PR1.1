@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nintendo_db/layout_consola.dart';
+import 'package:nintendo_db/layout_joc.dart';
 import 'package:provider/provider.dart';
 import 'app_data.dart';
 import 'layout_personatge.dart';
@@ -44,6 +46,12 @@ class _StateLayoutMobileScreen2 extends State<LayoutMobileScreen2> {
     switch (widget.seccio) {
       case 'Personatges':
         return LayoutPersonatge(itemData: itemData);
+
+      case 'Jocs':
+        return LayoutJoc(itemData: itemData);
+
+      case 'Consoles':
+        return LayoutConsola(itemData: itemData);
     }
     return Text('Unknown layout: ${widget.seccio}');
   }
