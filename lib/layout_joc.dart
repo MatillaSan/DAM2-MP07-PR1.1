@@ -40,32 +40,34 @@ class LayoutJoc extends StatelessWidget {
           // Ocupar la meitat inferior de l'espai amb els textos
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.4,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "${itemData['any']}",
-                  style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.grey),
-                ),
-                Text(
-                  "${itemData['tipus']}",
-                  style: const TextStyle(
-                      fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 30),
-                Padding(
-                  padding:
-                      EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
-                  child: Text(
-                    "${itemData['descripcio']}",
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "${itemData['any']}",
                     style: const TextStyle(
-                        fontSize: 20, fontWeight: FontWeight.normal),
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.grey),
                   ),
-                )
-              ],
+                  Text(
+                    "${itemData['tipus']}",
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 30),
+                  Padding(
+                    padding:
+                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                    child: Text(
+                      "${itemData['descripcio']}",
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.normal),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],

@@ -42,42 +42,44 @@ class LayoutConsola extends StatelessWidget {
           // Ocupar la meitat inferior de l'espai amb els textos
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.4,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "${itemData['nom']}",
-                  style: const TextStyle(
-                      fontSize: 45, fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(height: 20),
-                Container(
-                  width: 30,
-                  height: 30,
-                  decoration: BoxDecoration(
-                      color: getColorFromString(itemData['color']),
-                      border: Border.all(
-                        width: 1,
-                      )),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  "${itemData['data']}".substring(0, 4),
-                  style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal,
-                      color: Colors.grey),
-                ),
-                Text(
-                  "${itemData['procesador']}",
-                  style: const TextStyle(
-                      fontSize: 25, fontWeight: FontWeight.bold),
-                ),
-                Text(
-                  "${itemData['venudes'].toString()} vendues",
-                  style: const TextStyle(fontSize: 25),
-                ),
-              ],
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "${itemData['nom']}",
+                    style: const TextStyle(
+                        fontSize: 45, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: 30,
+                    height: 30,
+                    decoration: BoxDecoration(
+                        color: getColorFromString(itemData['color']),
+                        border: Border.all(
+                          width: 1,
+                        )),
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    "${itemData['data']}".substring(0, 4),
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.normal,
+                        color: Colors.grey),
+                  ),
+                  Text(
+                    "${itemData['procesador']}",
+                    style: const TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "${itemData['venudes'].toString()} vendues",
+                    style: const TextStyle(fontSize: 25),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
